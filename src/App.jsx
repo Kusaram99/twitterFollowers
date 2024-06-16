@@ -1,19 +1,9 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import FollowerList from './components/FollowerList';
-// import DateFilter from './components/DateFilter';
 import SortBy from './components/SortBy';
 import FileBar from './components/FileBar';
 import UserList from './components/UserList';
-// import DateFilter from './components/DateFilter';
-
-// 1. make ui -- done,
-// 2. make api call -- done,
-// 3. filter the follewers based on thier joined date between the From date and a To Date. store them into the filterFollowers array.-- ,
-// 4. make sort -- ,
-// 5. make remove -- ,
 
 
 
@@ -21,7 +11,6 @@ import UserList from './components/UserList';
 const App = () => {
   const [followers, setFollowers] = useState([]);
   const [filteredFollowers, setFilteredFollowers] = useState([]);
-  const [sortCriterion, setSortCriterion] = useState('');
   const [sortOrder, setSortOrder] = useState({ field: "", ascednding: true });
 
   useEffect(() => {
@@ -50,8 +39,6 @@ const App = () => {
   const handleSort = (field) => {
     const isAscending = sortOrder.field === field ? !sortOrder.ascednding : true;
     const sorted = followers.sort((a, b) => {
-      // console.log("a: ", a);
-      // console.log("b: ", b);
       if (isAscending) {
         return a.twubric[field] - b.twubric[field];
       }
@@ -59,10 +46,10 @@ const App = () => {
     });
 
     setSortOrder({ field, ascednding: isAscending });
-    setFilteredFollowers(sorted); 
+    setFilteredFollowers(sorted);
   };
 
-  const handleRemove = (id) => { 
+  const handleRemove = (id) => {
     const updatedFollowers = filteredFollowers.filter(follower => follower.uid !== id);
     console.log("updatedFollowers: ", updatedFollowers);
     setFilteredFollowers(updatedFollowers);
@@ -71,13 +58,9 @@ const App = () => {
 
   return (
     <div className="container">
-      {/* <h1>Twitter Followers</h1> */}
-      {/* <DateFilter onFilter={handleDateFilter} /> */}
       <SortBy onSort={handleSort} sortOrder={sortOrder} />
-      {/* <FollowerList followers={filteredFollowers} onRemove={handleRemove} /> */}
       <FileBar onFilter={handleDateFilter} />
       <UserList users={filteredFollowers} handleRemove={handleRemove} />
-      {/* <DateFilter/> */}
     </div>
   );
 };
