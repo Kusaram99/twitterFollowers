@@ -1,8 +1,21 @@
-# React + Vite
+# Twitter Followers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- This is simple twitter follower web application where user can see their followers data and remove their followers.
+- Here is a API request that returns user followers in response.
+- And then display them.
+- Sorting followers using thier data as buttons click and between the joining date and End Date.
 
-Currently, two official plugins are available:
+### [Demo Link](https://twitter-followers-lac.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation 
+
+- You can download file also (If you don't want follow command).
+- ### Install through command
+- Run to clone project `git clone https://github.com/Kusaram99/twitterFollowers.git`.
+- Run in root directory `npm install`.
+- start project `npm run dev`.
+
+
+### Technology used in this project 
+- React js
+- Bootstrap `(to styling)`

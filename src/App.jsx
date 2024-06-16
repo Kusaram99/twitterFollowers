@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SortBy from './components/SortBy';
 import FileBar from './components/FileBar';
 import UserList from './components/UserList';
-import DateFilter from './components/DateFilter';
+// import DateFilter from './components/DateFilter';
 
 // 1. make ui -- done,
 // 2. make api call -- done,
