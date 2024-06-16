@@ -19,7 +19,7 @@ const FileBar = ({ onFilter }) => {
     return (
         <div className="container my-4 p-0"> 
             <div className="row my-2">
-                <label className="fw-bold form-label">Joined Twitter between</label>
+                <h1 className="h4">Joined Twitter between</h1>
                 <div className="col d-flex gap-2 gap-md-3 flex-column flex-sm-row">
                     <div className='col col-md-3'>
                         <label
